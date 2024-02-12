@@ -5,7 +5,16 @@
 }
 
 body {
-    overflow-x: hidden;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+
+.background {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
 }
 
 .scroll-container {
@@ -81,6 +90,7 @@ body {
 }
 
 .fade-in.visible, .fade-in-header.visible {
+    display: block;
     opacity: 1;
     transform:translateY(0);
 }
@@ -90,8 +100,13 @@ body {
     padding-bottom: 150px;
 }
 
+.header-container.fifth {
+    height: 200px;
+}
+
+
+
 #button-container {
-    display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
@@ -99,6 +114,18 @@ body {
     width: 75%;
 }
 
+#button-container.visible {
+    display: flex;
+}
+
+#button-container.inactive {
+    display: none;
+}
+
+canvas {
+    position: absolute;
+    opacity: 0.25;
+  }
 
 /* ============================================================================================== 
 BUTTONS
@@ -175,6 +202,17 @@ BUTTONS
   opacity: 1;
 }
 
+.button.inactive {
+    opacity: 0;
+}
+
+.no-button.floating {
+    position: fixed;
+    text-align: center;
+    display: block;
+    top: 587px;
+    left: 60%;
+}
 
 /* ============================================================================================== 
 TEXT PULSE
@@ -200,7 +238,7 @@ BACKGROUND
 ================================================================================================= */
 
 .gradient-overlay {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -262,14 +300,15 @@ TWINKLING STARS
 }
 
 .stars, .twinkling {
-  position: fixed;
+  position: absolute;
   top:0;
   left:0;
   right:0;
   bottom:0;
   width:100%;
   height:100%;
-  display:block;
+  display: inline-block;
+  overflow: hidden;
 }
 
 .stars {
@@ -286,4 +325,65 @@ TWINKLING STARS
   -o-animation:move-twink-back 200s linear infinite;
   -webkit-animation:move-twink-back 200s linear infinite;
   animation:move-twink-back 200s linear infinite;
+}
+
+
+
+@media (max-width: 1601px) and (min-width: 1114px) {
+    .fade-in-header.second {
+        font-size: 8vw;
+        flex: 1;
+        line-height: 1.25em;
+    }
+}
+
+@media (max-width: 1114px) and (min-width: 876px) {
+    .fade-in-header.second {
+        font-size: 10vw;
+        flex: 1;
+        line-height: 1.25em;
+    }
+}
+
+
+@media (max-width: 876px) and (min-width: 460px){
+    .fade-in-header.second {
+        font-size: 11vw;
+        flex: 1;
+        line-height: 1.25em;
+    }
+    .header-container h1 {
+        font-size: 23vw;
+    }
+    .fade-in-header.fifth-round {
+        line-height: 1em;
+    }
+}
+
+@media (max-width: 460px) {
+    .header-container {
+        height: 150px;
+    }
+    .fade-in-header.second {
+        font-size: 11vw;
+        flex: 1;
+        line-height: 1.25em;
+    }
+    .header-container h1 {
+        font-size: 23vw;
+    }
+    .subtitle-container p {
+        font-size: 20px;
+        margin: 0 15px 0 15px;
+    }
+    #button-container {
+        flex-direction: column;
+    }
+    .subtitle-container {
+        height: 25%;
+    }
+    .header-container.fifth {
+        margin: 0 15px 0 15px;
+        height: 150px;
+    }
 }

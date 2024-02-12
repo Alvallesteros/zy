@@ -9,9 +9,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
 </head>
 <body>
     <div class="page" id="page1">
+        
         <div class="header-container">
             <h1 class="fade-in-header first-round" id="pulsating-text">Hi Zy!</h1>
             <h1 class="fade-in-header second first-round" id="pulsating-text">Will you be my Valentine's?</h1>
@@ -20,9 +22,9 @@
             <p class="fade-in first-text">It has been a wonderful 3 months...</p>
             <p class="fade-in first-text">...and I couldn't have been more grateful to be here.</p>
             <p class="fade-in first-text">With that said...</p>
-            <div class="fade-in first-text" id="button-container">
+            <div class="fade-in first-text inactive" id="button-container">
                 <div class="button yes-button">Yes</div>
-                <div class="button no-button" click="noClick">No</div>
+                <div class="button no-button">No</div>
             </div>
         </div>
     </div>
@@ -36,14 +38,15 @@
         <div class="subtitle-container">
             <p class="fade-in second-text">hmph >:(</p>
             <p class="fade-in second-text">dejk ulet.</p>
-            <div class="fade-in second-text" id="button-container">
+            <div class="fade-in second-text inactive" id="button-container">
                 <div class="button yes-button">Yes</div>
-                <div class="button no-button" onmousedown="noClick">No</div>
+                <div class="button no-button">No</div>
             </div>
         </div>
     </div>
 
     <div class="page" id="page3">
+        <div class="fade-in button no-button floating inactive">No</div>
         <div class="header-container">
             <h1 class="fade-in-header third-round" id="pulsating-text">:((((</h1>
             <h1 class="fade-in-header second third-round" id="pulsating-text">Will you be my Valentine's?</h1>
@@ -51,9 +54,9 @@
         <div class="subtitle-container">
             <p class="fade-in third-text">ayaw mo ba talaga?</p>
             <p class="fade-in third-text">one last time pls.</p>
-            <div class="fade-in third-text" id="button-container">
+            <div class="fade-in third-text inactive" id="button-container">
                 <div class="button yes-button">Yes</div>
-                <div class="button no-button" onmousedown="noClick">No</div>
+                <div class="button no-button inactive">No</div>
             </div>
         </div>
     </div>
@@ -64,11 +67,51 @@
             <h1 class="fade-in-header second fourth-round" id="pulsating-text">bye...</h1>
         </div>
         <div class="subtitle-container">
+            <div class="fade-in fourth-text"></div>
+            <img src="https://media.tenor.com/QOCa8ufKtdIAAAAM/sad-spongebob.gif" height='200%'width='auto' class="fade-in fourth-text" id="pulsating-text"/>
         </div>
     </div>
-    <div class="gradient-overlay"></div>
-    <div class="stars"></div>
-    <div class="twinkling"></div>
+
+    <div class="page" id="page5">
+        <div class="header-container fifth">
+            <h1 class="fade-in-header second fifth-round" id="pulsating-text">awwww yehey<33</h1>
+            <h1 class="fade-in-header second fifth-round" id="pulsating-text">May DOST na ba?</h1>
+        </div>
+        <div class="subtitle-container">
+            <p class="fade-in fifth-text">ang harot naman po</p>
+            <p class="fade-in fifth-text">ok last question...</p>
+            <div class="fade-in fifth-text inactive" id="button-container">
+                <div class="button yes-button">Yes</div>
+                <div class="button no-button">No</div>
+            </div>
+        </div>
+        <div class="background">
+            <canvas id="testCanvas" width="100vw" height="100vh"></canvas>
+        </div>
+    </div>
+
+    <div class="page" id="page6">
+        <div class="header-container">
+            <img src="https://i.gifer.com/origin/e1/e1266385df4078e03d173b482400a5cd_w200.gif" height='200%'width='auto' class="fade-in-header sixth-round" id="pulsating-text"/>
+        </div>
+        <div class="subtitle-container">
+            <p class="fade-in sixth-text">yehey! Let's have a 'good' dinner. see you tomorrow!</p>
+        </div>
+    </div>
+
+    <div class="page" id="page7">
+        <div class="header-container">
+            <img src="https://i.imgur.com/nk2j1J6.png" height='200%'width='auto' class="fade-in-header seventh-round" id="pulsating-text"/>
+        </div>
+        <div class="subtitle-container">
+            <p class="fade-in seventh-text">sapat na pong tumambay with u <3. See youu!!</p>
+        </div>
+    </div>
+    <div class="background">
+        <div class="gradient-overlay"></div>
+        <div class="stars"></div>
+        <div class="twinkling"></div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
